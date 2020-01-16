@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0edc21e7-6e33-467b-9ad3-bfd46cf60e60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Clock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CoursesList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CoursesList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/CoursesHttpService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AuthForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CourseForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/AuthService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CoursesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CoursesList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CoursesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CoursesList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AuthEntity" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -93,34 +93,57 @@
       <option name="presentableId" value="Default" />
       <updated>1578988259322</updated>
       <workItem from="1578988261777" duration="16810000" />
-      <workItem from="1579159634836" duration="112000" />
+      <workItem from="1579159634836" duration="18754000" />
     </task>
+    <task id="LOCAL‎00001" summary="first commit">
+      <created>1579159939027</created>
+      <option name="number" value="LOCAL‎00001" />
+      <option name="presentableId" value="LOCAL‎00001" />
+      <updated>1579159939027</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="90" key="#ESLint" timestamp="1579159753389">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="392" y="90" key="#ESLint/0.0.1600.860@0.0.1600.860" timestamp="1579159753389" />
-    <state width="1578" height="218" key="GridCell.Tab.0.bottom" timestamp="1579078824867">
+    <state x="438" y="23" key="CommitChangelistDialog2" timestamp="1579159934062">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1579078824867" />
-    <state width="1578" height="218" key="GridCell.Tab.0.center" timestamp="1579078824867">
+    <state x="438" y="23" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1579159934062" />
+    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1579179618480">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1579078824867" />
-    <state width="1578" height="218" key="GridCell.Tab.0.left" timestamp="1579078824867">
+    <state x="580" y="187" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579179618480" />
+    <state width="1578" height="218" key="GridCell.Tab.0.bottom" timestamp="1579168693439">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1579078824867" />
-    <state width="1578" height="218" key="GridCell.Tab.0.right" timestamp="1579078824867">
+    <state width="1578" height="218" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1579168693439" />
+    <state width="1578" height="218" key="GridCell.Tab.0.center" timestamp="1579168693438">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1579078824867" />
+    <state width="1578" height="218" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1579168693438" />
+    <state width="1578" height="218" key="GridCell.Tab.0.left" timestamp="1579168693438">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1578" height="218" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1579168693438" />
+    <state width="1578" height="218" key="GridCell.Tab.0.right" timestamp="1579168693438">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1578" height="218" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1579168693438" />
+    <state x="392" y="153" key="Vcs.Push.Dialog.v2" timestamp="1579159958864">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="153" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1579159958864" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1579002483001">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

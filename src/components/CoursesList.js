@@ -1,5 +1,6 @@
 import './CoursesList.css';
 import React from "react";
+import CourseForm from "./CourseForm";
 
 class CoursesList extends React.Component
 {
@@ -8,10 +9,10 @@ class CoursesList extends React.Component
         super(props);
         this.titles = [];
         this.teachers = [];
+        this.state = {courses: [], isFormShown: false};
+
         this.courseService = props.courseService;
         if (!this.courseService) throw new Error('!no Course Service provided!');
-
-        this.state = {courses: []};
     }
 
 
@@ -40,15 +41,22 @@ class CoursesList extends React.Component
     }
 
     onCourseDelete(id) {
-        this.courseService.deleteCourse(id).subscribe(() => {
-            this.refresh();
+        if (window.confirm("Are you sure that you want to delete course with id: "+ id ))
+            this.courseService.deleteCourse(id).subscribe(() => {
+                this.refresh();
         });
     }
 
-    onCourseAdd(id) {
+    addCourseFunc(id) {
         this.courseService.addCourse(id).subscribe(() => {
             this.refresh();
         });
+        this.setState({isFormShown: false});
+    }
+
+    showForm()
+    {
+        this.setState({isFormShown: true});
     }
 
     refresh() {
@@ -60,34 +68,41 @@ class CoursesList extends React.Component
     render() {
         const courseRecords = this.state.courses.map( course => {
             return (
-                <tr>
+                <tr key={course.id}>
+
                     <td>{course.id}</td>
                     <td>{course.title}</td>
                     <td>{course.teacher}</td>
-                    <td>
+                    <td className="remove">
                         <i className={"fa fa-trash"} onClick={this.onCourseDelete.bind(this, course.id)}></i>
                     </td>
                 </tr>
             )
         });
 
-        const addCourseBtn = <button className={"btn"} onClick={this.onCourseAdd.bind(this)}>Add New</button>;
+        const addCourseBtn = <button className={"btn btn-primary"} onClick={this.showForm.bind(this)}>Add New Course</button>;
+
+        if (this.state.isFormShown)
+            return (
+                <CourseForm titles={this.titles} teachers={this.teachers} courses={this.state.courses} addCourseFunc={this.addCourseFunc.bind(this)}/>
+            );
 
         return (
-            {addCourseBtn},
-            <table className="table">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Teacher</th>
-                    <th>Remove</th>
-                </tr>
-                </thead>
-                <tbody>
-                    {courseRecords}
-                </tbody>
-            </table>
+            <div>{addCourseBtn}
+                <table className="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Teacher</th>
+                        <th className="remove">Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {courseRecords}
+                    </tbody>
+                </table>
+            </div>
         )
     }
 }

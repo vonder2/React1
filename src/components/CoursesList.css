@@ -11,3 +11,6 @@ thead, tbody tr{
     table-layout: fixed;
 
 }
+th, td > remove{
+    width: 25px;
+}
