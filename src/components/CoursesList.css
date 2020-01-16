@@ -1,0 +1,13 @@
+tbody {
+    display: block;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+thead, tbody tr{
+/*//because of a block*/
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+}
