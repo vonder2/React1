@@ -6,8 +6,8 @@ export default class AuthService
         this.subjectAuth = new BehaviorSubject(false);
         this.subjectAdmin = new BehaviorSubject(false);
         this.accounts = [
-            {username: 'user1', password: 'user', role: 'user'},
-            {username: 'user2', password: 'admin', role: 'admin'},
+            {username: 'user', password: 'user', role: 'user'},
+            {username: 'admin', password: 'admin', role: 'admin'},
         ];
     }
 
@@ -31,8 +31,6 @@ export default class AuthService
 
             return account.username;
         }
-
-
     }
 
     logout() {

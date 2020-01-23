@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import './App.css';
+import CoursesHttpService from "./services/CoursesHttpService";
+import CoursesList from "./components/CourseList/CoursesList";
+import AuthForm from "./components/AuthForm"
+import NavBar from "./components/NavBar";
+import Logout from "./components/Logout";
+import AuthService from "./services/AuthService";
+
+
+
 
 function App() {
-  return (
-    <div className="App">
+  const myCourseService = new CoursesHttpService("http://localhost:3500/courses/",
+      "http://localhost:3500/titles", "http://localhost:3500/teachers");
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const authService = new AuthService();
+  const [isAuth, setAuth] = useState(false);
+
+  useEffect(function () {
+      authService.isAuth().subscribe(isAuth => setAuth(isAuth));
+  })
+
+  return (
+      <BrowserRouter>
+        <div className="App">
+          <NavBar authService={authService}></NavBar>
+
+          <Switch>
+            <Route path={'/courses'} exact render={()=> isAuth ?
+                <CoursesList authService={authService} courseService={myCourseService} /> : <div/> } />
+
+            <Route path={'/login'} exact render={()=>
+                <AuthForm authService={authService} redirectTo={'/courses'} />  } />
+
+            <Route path={'/logout'} exact render={()=>
+                <Logout authService={authService}  />} />
+
+          </Switch>
+        </div>
+      </BrowserRouter>
+
   );
 }
 

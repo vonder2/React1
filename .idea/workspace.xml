@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0edc21e7-6e33-467b-9ad3-bfd46cf60e60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AuthForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CourseForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/AuthService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CoursesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CoursesList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CoursesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CoursesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CourseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseList/CourseForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CoursesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseList/CoursesList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CoursesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseList/CoursesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/AuthService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AuthService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +54,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LenovoUser\WebstormProjects\react-project1\src\components\CourseList" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -93,7 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1578988259322</updated>
       <workItem from="1578988261777" duration="16810000" />
-      <workItem from="1579159634836" duration="18754000" />
+      <workItem from="1579159634836" duration="19092000" />
+      <workItem from="1579763740922" duration="7657000" />
     </task>
     <task id="LOCAL‎00001" summary="first commit">
       <created>1579159939027</created>
@@ -101,7 +106,13 @@
       <option name="presentableId" value="LOCAL‎00001" />
       <updated>1579159939027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎00002" summary="not working state">
+      <created>1579179653309</created>
+      <option name="number" value="LOCAL‎00002" />
+      <option name="presentableId" value="LOCAL‎00002" />
+      <updated>1579179653309</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,44 +120,45 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="not working state" />
+    <option name="LAST_COMMIT_MESSAGE" value="not working state" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="90" key="#ESLint" timestamp="1579159753389">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="392" y="90" key="#ESLint/0.0.1600.860@0.0.1600.860" timestamp="1579159753389" />
-    <state x="438" y="23" key="CommitChangelistDialog2" timestamp="1579159934062">
+    <state x="438" y="23" key="CommitChangelistDialog2" timestamp="1579179652103">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="438" y="23" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1579159934062" />
-    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1579179618480">
+    <state x="438" y="23" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1579179652103" />
+    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1579770016816">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="187" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579179618480" />
-    <state width="1578" height="218" key="GridCell.Tab.0.bottom" timestamp="1579168693439">
+    <state x="580" y="187" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579770016816" />
+    <state width="1578" height="218" key="GridCell.Tab.0.bottom" timestamp="1579768581773">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1579168693439" />
-    <state width="1578" height="218" key="GridCell.Tab.0.center" timestamp="1579168693438">
+    <state width="1578" height="218" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1579768581773" />
+    <state width="1578" height="218" key="GridCell.Tab.0.center" timestamp="1579768581773">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1579168693438" />
-    <state width="1578" height="218" key="GridCell.Tab.0.left" timestamp="1579168693438">
+    <state width="1578" height="218" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1579768581773" />
+    <state width="1578" height="218" key="GridCell.Tab.0.left" timestamp="1579768581772">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1579168693438" />
-    <state width="1578" height="218" key="GridCell.Tab.0.right" timestamp="1579168693438">
+    <state width="1578" height="218" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1579768581772" />
+    <state width="1578" height="218" key="GridCell.Tab.0.right" timestamp="1579768581773">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="218" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1579168693438" />
-    <state x="392" y="153" key="Vcs.Push.Dialog.v2" timestamp="1579159958864">
+    <state width="1578" height="218" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1579768581773" />
+    <state x="392" y="153" key="Vcs.Push.Dialog.v2" timestamp="1579179658162">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="153" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1579159958864" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1579002483001">
+    <state x="392" y="153" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1579179658162" />
+    <state x="463" y="180" width="670" height="58" key="search.everywhere.popup" timestamp="1579767681477">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1579002483001" />
+    <state x="463" y="180" width="670" height="58" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1579767681477" />
   </component>
 </project>

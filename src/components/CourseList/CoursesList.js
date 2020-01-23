@@ -2,25 +2,28 @@ import './CoursesList.css';
 import React from "react";
 import CourseForm from "./CourseForm";
 
-class CoursesList extends React.Component
+export default class CoursesList extends React.Component
 {
-
     constructor(props) {
         super(props);
         this.titles = [];
         this.teachers = [];
-        this.state = {courses: [], isFormShown: false};
+        this.state = {courses: [], isFormShown: false, isAdmin: false};
 
         this.courseService = props.courseService;
-        if (!this.courseService) throw new Error('!no Course Service provided!');
+        this.authService = props.authService;
+        if (!this.courseService) throw new Error('!No Course Service provided!');
     }
-
-
 
     //ngOnInit
     componentDidMount() {
+        this.subscriptionAdmin = this.authService.isAdmin().subscribe(
+            isAdmin => this.setState({isAdmin})
+        );
+
         this.subscriptionCourses = this.courseService.getAllCourses().subscribe(
-            courses => this.setState({courses}));
+            courses => this.setState({courses})
+        );
 
         this.subscriptionTitles = this.courseService.getAllTitles().subscribe(
             titles => this.titles = titles);
@@ -30,6 +33,9 @@ class CoursesList extends React.Component
     }
 
     componentWillUnmount() {
+        if (!this.subscriptionAdmin.closed)
+            this.subscriptionAdmin.unsubscribe();
+
         if (!this.subscriptionCourses.closed)
             this.subscriptionCourses.unsubscribe();
 
@@ -54,9 +60,9 @@ class CoursesList extends React.Component
         this.setState({isFormShown: false});
     }
 
-    showForm()
+    showForm(yes = true)
     {
-        this.setState({isFormShown: true});
+        this.setState({isFormShown: yes});
     }
 
     refresh() {
@@ -73,14 +79,14 @@ class CoursesList extends React.Component
                     <td>{course.id}</td>
                     <td>{course.title}</td>
                     <td>{course.teacher}</td>
-                    <td className="remove">
+                    <td hidden={!this.state.isAdmin} className="remove">
                         <i className={"fa fa-trash"} onClick={this.onCourseDelete.bind(this, course.id)}></i>
                     </td>
                 </tr>
             )
         });
 
-        const addCourseBtn = <button className={"btn btn-primary"} onClick={this.showForm.bind(this)}>Add New Course</button>;
+        const addCourseBtn = <button hidden={!this.state.isAdmin} className={"btn btn-primary"} onClick={this.showForm.bind(this)}>Add New Course</button>;
 
         if (this.state.isFormShown)
             return (
@@ -95,7 +101,7 @@ class CoursesList extends React.Component
                         <th>ID</th>
                         <th>Title</th>
                         <th>Teacher</th>
-                        <th className="remove">Remove</th>
+                        <th hidden={!this.state.isAdmin} className="remove">Remove</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -106,4 +112,3 @@ class CoursesList extends React.Component
         )
     }
 }
-export default CoursesList;

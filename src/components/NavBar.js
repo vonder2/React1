@@ -1,14 +1,13 @@
 import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 
-function NavBar(props) {
+export default function NavBar(props) {
     const [isAuth, setAuth] = useState(false);
 
     useEffect(() => {
         const subscrib = props.authService.isAuth().subscribe(res => setAuth(res));
 
-        return () => {
-            //dismount func
+        return () => { //dismount func
             subscrib.unsubscribe();
         }
     });
@@ -24,7 +23,6 @@ function NavBar(props) {
             <li className={"nav-item"}  hidden={!isAuth}>
                 <Link to={'/logout'}><span className="nav-link">Logout</span></Link>
             </li>
-
         </ul>
     )
 }

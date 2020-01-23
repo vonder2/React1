@@ -55,7 +55,7 @@ export default class CourseForm extends React.Component
         )});
 
         return (
-            <div className="card" style={{width: 300 + 'px'}}>
+            <div className="card" style={{width: 300 + 'px', position: "absolute", left: 40 + 'vw'}}>
                 <header className="card-header">Course data</header>
                 <div className="card-body">
                     <form onSubmit={this.handleOnSubmit}>
@@ -79,6 +79,7 @@ export default class CourseForm extends React.Component
                             </select>
                         </div>
                         <button className="btn" disabled={this.invalid} type={"submit"}>Add Course</button>
+                        <button className="btn" type={"cancel"} onClick={false}>Cancel</button>
                     </form>
                 </div>
 
